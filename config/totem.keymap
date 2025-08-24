@@ -20,7 +20,6 @@
 #define Sym             1
 #define Nav             2
 #define Adjust          3
-#define Game            4
 
 &sk {
     release-after-ms = <1000>;
@@ -82,20 +81,10 @@
         Adjust {
             label = "Adjust";
             bindings = <
-                      &to Game      &bt BT_CLR_ALL  &bt BT_CLR  &bt BT_NXT      &bt BT_SEL 0             &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP &msc SCRL_RIGHT &none
+                      &none         &bt BT_CLR_ALL  &bt BT_CLR  &bt BT_NXT      &bt BT_SEL 0             &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP &msc SCRL_RIGHT &none
                       &out OUT_BLE  &out OUT_USB    &none       &studio_unlock  &caps_word               &kp HOME        &kp PG_DN       &kp PG_UP    &kp END         &kp INS
             &kp F12   &kp F1        &kp F2          &kp F3      &kp F4          &kp F5                   &kp F6          &kp F7          &kp F8       &kp F9          &kp F10     &kp F11
                                                     &none       &none           &none                    &none           &none           &none
-            >;
-        };
-
-        Game {
-            label = "Game";
-            bindings = <
-                     &kp ESC    &kp Q  &kp W    &kp E      &kp R                 &none  &none  &none  &none  &none
-                     &kp LSHFT  &kp A  &kp S    &kp D      &kp F                 &none  &none  &none  &none  &none
-            &kp TAB  &kp Z      &kp X  &kp C    &kp V      &kp M                 &none  &none  &none  &none  &none  &none
-                                       &to Base &kp LCTRL  &kp SPACE             &none  &none  &none
             >;
         };
     };
